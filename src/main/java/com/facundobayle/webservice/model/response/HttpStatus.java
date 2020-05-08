@@ -1,4 +1,4 @@
-package main.java.com.facundobayle.webservice.model.response;
+package com.facundobayle.webservice.model.response;
 
 public enum HttpStatus {
     OK(200, "OK"),

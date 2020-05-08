@@ -1,9 +1,9 @@
-package main.java.com.facundobayle.webservice.server;
+package com.facundobayle.webservice.server;
 
-import main.java.com.facundobayle.webservice.HttpResponseHandler;
-import main.java.com.facundobayle.webservice.formatter.HttpRequestFormatter;
-import main.java.com.facundobayle.webservice.formatter.HttpResponseFormatter;
-import main.java.com.facundobayle.webservice.helper.StreamHelper;
+import com.facundobayle.webservice.HttpResponseHandler;
+import com.facundobayle.webservice.formatter.HttpRequestFormatter;
+import com.facundobayle.webservice.formatter.HttpResponseFormatter;
+import com.facundobayle.webservice.helper.StreamHelper;
 
 import java.io.*;
 import java.net.Socket;
@@ -34,7 +34,6 @@ public class SocketHandler {
                 String inputLine;
                 while (!(inputLine = streamHelper.readLine(inputStream)).equals("") && (inputLine.length() > 0)) {
                     linesList.add(inputLine);
-                    System.out.println(inputLine);
                 }
 
                 var request =  httpRequestFormatter.parseClientRequest(inputStream, linesList);

@@ -1,4 +1,4 @@
-package main.java.com.facundobayle.webservice.helper;
+package com.facundobayle.webservice.helper;
 
 import java.io.IOException;
 import java.io.InputStream;

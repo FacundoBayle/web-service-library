@@ -1,7 +1,7 @@
-package main.java.com.facundobayle.webservice.formatter;
+package com.facundobayle.webservice.formatter;
 
-import main.java.com.facundobayle.webservice.model.response.HttpResponse;
-import main.java.com.facundobayle.webservice.model.response.HttpStatus;
+import com.facundobayle.webservice.model.response.HttpResponse;
+import com.facundobayle.webservice.model.response.HttpStatus;
 
 import java.util.List;
 import java.util.Map;

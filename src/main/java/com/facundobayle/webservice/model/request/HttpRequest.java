@@ -1,4 +1,4 @@
-package main.java.com.facundobayle.webservice.model.request;
+package com.facundobayle.webservice.model.request;
 
 import java.util.List;
 import java.util.Map;

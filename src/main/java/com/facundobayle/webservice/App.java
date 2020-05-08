@@ -1,6 +1,6 @@
-package main.java.com.facundobayle.webservice;
+package com.facundobayle.webservice;
 
-import main.java.com.facundobayle.webservice.server.Server;
+import com.facundobayle.webservice.server.Server;
 
 import java.io.IOException;
 

@@ -1,4 +1,4 @@
-package main.java.com.facundobayle.webservice.server;
+package com.facundobayle.webservice.server;
 
 import java.io.IOException;
 import java.net.ServerSocket;

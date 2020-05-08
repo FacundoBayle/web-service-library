@@ -1,6 +1,4 @@
-package main.java.com.facundobayle.webservice.model.request;
-
-import main.java.com.facundobayle.webservice.model.request.Protocol;
+package com.facundobayle.webservice.model.request;
 
 import java.util.Map;
 
