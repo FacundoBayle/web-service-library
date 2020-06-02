@@ -1,6 +1,6 @@
 package com.facundobayle.webservice.server;
 
-import com.facundobayle.webservice.HttpResponseHandler;
+import com.facundobayle.webservice.handler.HttpResponseHandler;
 import com.facundobayle.webservice.formatter.HttpRequestFormatter;
 import com.facundobayle.webservice.formatter.HttpResponseFormatter;
 import com.facundobayle.webservice.helper.StreamHelper;
@@ -10,7 +10,7 @@ import java.net.Socket;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SocketHandler {
+public class SocketHandler implements Runnable {
     private Socket socket;
     private HttpRequestFormatter httpRequestFormatter;
     private HttpResponseFormatter httpResponseFormatter;
@@ -25,6 +25,7 @@ public class SocketHandler {
         this.httpResponseHandler = new HttpResponseHandler();
     }
 
+    @Override
     public void run() {
         try {
             var inputStream = socket.getInputStream();

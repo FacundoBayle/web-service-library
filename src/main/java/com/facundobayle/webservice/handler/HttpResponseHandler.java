@@ -1,4 +1,4 @@
-package com.facundobayle.webservice;
+package com.facundobayle.webservice.handler;
 
 import com.facundobayle.webservice.model.response.HttpResponse;
 
