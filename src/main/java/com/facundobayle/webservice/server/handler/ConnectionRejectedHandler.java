@@ -1,6 +1,6 @@
-package com.facundobayle.webservice.handler;
+package com.facundobayle.webservice.server.handler;
 
-import com.facundobayle.webservice.model.response.Responses;
+import com.facundobayle.webservice.server.model.response.Responses;
 
 import java.io.IOException;
 import java.net.Socket;

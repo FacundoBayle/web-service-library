@@ -1,8 +1,10 @@
 package com.facundobayle.webservice.server;
 
-import com.facundobayle.webservice.handler.ConnectionRejectedHandler;
-import com.facundobayle.webservice.handler.HttpResponseHandler;
-import com.facundobayle.webservice.worker.WorkerFactory;
+import com.facundobayle.webservice.server.configuration.ServerConfig;
+import com.facundobayle.webservice.server.handler.ConnectionRejectedHandler;
+import com.facundobayle.webservice.server.handler.HttpResponseHandler;
+import com.facundobayle.webservice.server.handler.SocketHandler;
+import com.facundobayle.webservice.server.worker.WorkerFactory;
 
 import java.io.IOException;
 import java.net.ServerSocket;

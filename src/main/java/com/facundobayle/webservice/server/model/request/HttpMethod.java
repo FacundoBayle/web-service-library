@@ -1,4 +1,4 @@
-package com.facundobayle.webservice.model.request;
+package com.facundobayle.webservice.server.model.request;
 
 public enum HttpMethod {
     GET,

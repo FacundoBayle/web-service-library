@@ -1,7 +1,7 @@
-package com.facundobayle.webservice;
+package com.facundobayle.webservice.client;
 
+import com.facundobayle.webservice.server.configuration.ServerConfig;
 import com.facundobayle.webservice.server.Server;
-import com.facundobayle.webservice.server.ServerConfig;
 
 import java.io.IOException;
 import java.time.Duration;

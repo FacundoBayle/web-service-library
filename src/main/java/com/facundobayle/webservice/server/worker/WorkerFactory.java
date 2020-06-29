@@ -1,4 +1,4 @@
-package com.facundobayle.webservice.worker;
+package com.facundobayle.webservice.server.worker;
 
 import java.time.Duration;
 import java.util.concurrent.ExecutorService;

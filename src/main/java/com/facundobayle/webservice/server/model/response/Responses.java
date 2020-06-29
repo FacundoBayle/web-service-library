@@ -1,4 +1,4 @@
-package com.facundobayle.webservice.model.response;
+package com.facundobayle.webservice.server.model.response;
 
 import java.util.Map;
 import java.util.Optional;

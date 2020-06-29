@@ -1,4 +1,4 @@
-package com.facundobayle.webservice.server;
+package com.facundobayle.webservice.server.configuration;
 
 import java.time.Duration;
 

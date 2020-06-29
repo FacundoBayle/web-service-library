@@ -1,9 +1,8 @@
-package com.facundobayle.webservice.server;
+package com.facundobayle.webservice.server.handler;
 
-import com.facundobayle.webservice.handler.HttpResponseHandler;
-import com.facundobayle.webservice.formatter.HttpRequestFormatter;
-import com.facundobayle.webservice.formatter.HttpResponseFormatter;
-import com.facundobayle.webservice.helper.StreamHelper;
+import com.facundobayle.webservice.server.formatter.HttpRequestFormatter;
+import com.facundobayle.webservice.server.formatter.HttpResponseFormatter;
+import com.facundobayle.webservice.server.helper.StreamHelper;
 
 import java.io.*;
 import java.net.Socket;

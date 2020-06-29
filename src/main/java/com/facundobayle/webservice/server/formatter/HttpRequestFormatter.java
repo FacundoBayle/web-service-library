@@ -1,10 +1,10 @@
-package com.facundobayle.webservice.formatter;
+package com.facundobayle.webservice.server.formatter;
 
-import com.facundobayle.webservice.helper.StreamHelper;
-import com.facundobayle.webservice.model.request.HttpMethod;
-import com.facundobayle.webservice.model.request.HttpRequest;
-import com.facundobayle.webservice.model.request.Protocol;
-import com.facundobayle.webservice.model.request.URL;
+import com.facundobayle.webservice.server.helper.StreamHelper;
+import com.facundobayle.webservice.server.model.request.HttpMethod;
+import com.facundobayle.webservice.server.model.request.HttpRequest;
+import com.facundobayle.webservice.server.model.request.Protocol;
+import com.facundobayle.webservice.server.model.request.URL;
 
 import java.io.*;
 import java.util.*;
