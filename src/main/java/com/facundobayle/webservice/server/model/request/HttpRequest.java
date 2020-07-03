@@ -1,6 +1,6 @@
 package com.facundobayle.webservice.server.model.request;
 
-import com.facundobayle.webservice.servlet.ServletRequest;
+import com.facundobayle.webservice.jdk.ServletRequest;
 
 import java.util.List;
 import java.util.Map;

@@ -3,7 +3,7 @@ package com.facundobayle.webservice.server.handler;
 import com.facundobayle.webservice.server.formatter.HttpRequestFormatter;
 import com.facundobayle.webservice.server.formatter.HttpResponseFormatter;
 import com.facundobayle.webservice.server.helper.StreamHelper;
-import com.facundobayle.webservice.servlet.Servlet;
+import com.facundobayle.webservice.jdk.Servlet;
 
 import java.io.*;
 import java.net.Socket;

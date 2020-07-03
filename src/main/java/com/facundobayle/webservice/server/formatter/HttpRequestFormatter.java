@@ -1,6 +1,7 @@
 package com.facundobayle.webservice.server.formatter;
 
 import com.facundobayle.webservice.server.helper.StreamHelper;
+import com.facundobayle.webservice.server.model.HttpHeaders;
 import com.facundobayle.webservice.server.model.request.HttpMethod;
 import com.facundobayle.webservice.server.model.request.HttpRequest;
 import com.facundobayle.webservice.server.model.request.Protocol;
@@ -11,9 +12,6 @@ import java.util.*;
 
 
 public class HttpRequestFormatter {
-
-    private static final String HOST = "Host";
-    private static final String CONTENT_LENGTH = "Content-Length";
 
     private StreamHelper streamHelper;
 
@@ -35,7 +33,7 @@ public class HttpRequestFormatter {
 
         String body = null;
         if (requestHasBody(headers)) {
-            var contentlength = Integer.parseInt(headers.get(CONTENT_LENGTH).get(0).trim());
+            var contentlength = Integer.parseInt(headers.get(HttpHeaders.CONTENT_LENGTH).get(0).trim());
             body = buildBody(inputStream, contentlength);
         }
 
@@ -44,7 +42,7 @@ public class HttpRequestFormatter {
 
 
     private URL buildUrl(String fullPath, Map<String, List<String>> headers) {
-        String host = headers.get(HOST).get(0);
+        String host = headers.get(HttpHeaders.HOST).get(0);
         Map<String, String> queryParams = new HashMap<>();
         var splittedFullPath = fullPath.split("\\?", 2);
 
@@ -87,6 +85,6 @@ public class HttpRequestFormatter {
     }
 
     private boolean requestHasBody(Map<String, List<String>> headers) {
-        return headers.containsKey(CONTENT_LENGTH);
+        return headers.containsKey(HttpHeaders.CONTENT_LENGTH);
     }
 }

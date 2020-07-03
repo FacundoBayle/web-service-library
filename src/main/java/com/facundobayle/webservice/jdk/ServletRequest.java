@@ -1,4 +1,4 @@
-package com.facundobayle.webservice.servlet;
+package com.facundobayle.webservice.jdk;
 
 import java.util.List;
 import java.util.Optional;

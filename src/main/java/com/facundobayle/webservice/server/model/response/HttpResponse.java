@@ -1,6 +1,6 @@
 package com.facundobayle.webservice.server.model.response;
 
-import com.facundobayle.webservice.servlet.ServletResponse;
+import com.facundobayle.webservice.jdk.ServletResponse;
 
 import java.util.List;
 import java.util.Map;
