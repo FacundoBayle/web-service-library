@@ -12,7 +12,8 @@ public class App {
     public static void main(String[] args) {
         var configuration = new ServerConfig(9290, 1, Duration.of(30, ChronoUnit.SECONDS));
         try {
-            new Server(configuration).start();
+            var servlet = new AppServlet();
+            new Server(configuration, servlet).start();
         } catch (IOException e) {
             System.out.println("Error starting Server.");
             e.printStackTrace();

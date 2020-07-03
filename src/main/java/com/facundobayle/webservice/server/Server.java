@@ -5,6 +5,7 @@ import com.facundobayle.webservice.server.handler.ConnectionRejectedHandler;
 import com.facundobayle.webservice.server.handler.HttpResponseHandler;
 import com.facundobayle.webservice.server.handler.SocketHandler;
 import com.facundobayle.webservice.server.worker.WorkerFactory;
+import com.facundobayle.webservice.servlet.Servlet;
 
 import java.io.IOException;
 import java.net.ServerSocket;
@@ -14,9 +15,11 @@ import java.util.concurrent.RejectedExecutionException;
 public class Server {
 
     private ServerConfig serverConfig;
+    private Servlet servlet;
 
-    public Server(ServerConfig serverConfig) {
+    public Server(ServerConfig serverConfig, Servlet servlet) {
         this.serverConfig = serverConfig;
+        this.servlet = servlet;
     }
 
     public void start() throws IOException {
@@ -33,7 +36,7 @@ public class Server {
             try {
                 var socket = server.accept();
                 System.out.println("Nuevo cliente.");
-                var socketHandler = new SocketHandler(socket);
+                var socketHandler = new SocketHandler(socket, servlet);
                 try {
                     executorService.execute(socketHandler);
                     count+=1;

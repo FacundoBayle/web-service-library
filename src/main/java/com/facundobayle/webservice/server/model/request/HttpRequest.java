@@ -1,10 +1,12 @@
 package com.facundobayle.webservice.server.model.request;
 
+import com.facundobayle.webservice.servlet.ServletRequest;
+
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
-public class HttpRequest {
+public class HttpRequest implements ServletRequest {
     private HttpMethod method;
     private URL url;
     private Map<String, List<String>> headers;
@@ -17,8 +19,33 @@ public class HttpRequest {
         this.body = body;
     }
 
-    public HttpMethod getMethod() {
+    @Override
+    public String getHost() {
+        return null;
+    }
+
+    @Override
+    public String getMethod() {
+        return this.method.name();
+    }
+
+    public HttpMethod getHttpMethod() {
         return method;
+    }
+
+    @Override
+    public Optional<String> getHeader(String name) {
+        return Optional.empty();
+    }
+
+    @Override
+    public Optional<List<String>> getHeaderValues(String name) {
+        return Optional.empty();
+    }
+
+    @Override
+    public String getPath() {
+        return null;
     }
 
     public URL getUrl() {
@@ -31,5 +58,10 @@ public class HttpRequest {
 
     public Optional<String> getBody() {
         return body;
+    }
+
+    @Override
+    public Optional<String> getQueryString() {
+        return Optional.empty();
     }
 }
